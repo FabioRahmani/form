@@ -13,20 +13,3 @@
 
 
 
-<?php
-$name = $_POST['name'];
-$email = $_POST['email'];
-$phone = $_POST['phone'];
-$message = $_POST['message'];
-$formcontent=" From: $name \n Phone: $phone \n Message: $message";
-$recipient = "info@fabiorahmani.com";
-$subject = "Contact Form";
-$mailheader = "From: $email \r\n";
-
-if (isset($_POST["send"]) && $verify == '4') {
-        if (mail ($recipient, $subject, $message, $mailheader)) { 
-            echo '<p>Your message has been sent!</p>';
-         } 
-}
-
-
